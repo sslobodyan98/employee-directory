@@ -6,7 +6,7 @@ This project was built with React.js and some snippets of bootstrap.
 
 To build start with cloning,
 
-proceeds to:
+proceed to:
 **npm install** 
 
 then:

@@ -91,6 +91,7 @@ body {
 
 .form-control {
   margin: 20px 0;
+  width: 50%;
 }
 
 .form-control label {
@@ -98,7 +99,7 @@ body {
 }
 
 .form-control input {
-  width: 100%;
+  width: 50%;
   height: 40px;
   margin: 5px;
   padding: 3px 7px;

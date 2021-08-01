@@ -1,6 +1,6 @@
 import Employee from './Employee'
 
-const Details = ({ details, onDelete }) => {
+const Details = ({ details, onDelete}) => {
     
     return (
         <>

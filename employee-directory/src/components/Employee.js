@@ -6,13 +6,14 @@ const Employee = ({employee, onDelete}) => {
             <img
                 style={{ maxWidth: "60px"}}
                 src={employee.image}
-                alt="employee"
+                alt="picture_broken"
             />
             <h3>{employee.name}
             <FaTimes style={{ color:'red', cursor: 'pointer'}}
             onClick={() => onDelete(employee.id)}/>
             </h3>
             <p>{employee.department}</p>
+            <p>{employee.phone}</p>
         </div>
     )
 }

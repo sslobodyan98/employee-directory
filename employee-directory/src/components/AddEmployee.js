@@ -2,43 +2,43 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const AddEmployee = ({ onAdd }) => {
-    const [firstName, setFN] = useState('')
-    const [lastName, setLN] = useState('')
+    const [name, setName] = useState('')
     const [department, setDeptartment] = useState('')
+    const [phone, setPhone] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault()
 
-        if(!firstName || !lastName || !department){
+        if(!name || !department || !phone) {
             alert('Please complete all the information')
             return
         }
 
-        onAdd({ firstName, lastName, department})
+        onAdd({ name, department, phone})
 
-        setFN('')
-        setLN('')
+        setName('')
         setDeptartment('')
+        setPhone('')
     }
 
     return (
         <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
-                <label>First Name</label>
-                <input type='text' placeholder='First Name' value= {firstName} 
-                onChange={(e) => setFN(e.target.value)}/>
-            </div>
-
-            <div className='form-control'>
-                <label>Last Name</label>
-                <input type='text' placeholder='Last Name' value= {lastName} 
-                onChange={(e) => setLN(e.target.value)}/>
+                <label>Name</label>
+                <input type='text' placeholder='Enter Name' value= {name} 
+                onChange={(e) => setName(e.target.value)}/>
             </div>
 
             <div className='form-control'>
                 <label>Department</label>
-                <input type='text' placeholder='Department' value= {department} 
+                <input type='text' placeholder='Enter Department' value= {department} 
                 onChange={(e) => setDeptartment(e.target.value)}/>
+            </div>
+            
+            <div className='form-control'>
+                <label>Phone</label>
+                <input type='text' pattern='[0-9]*' placeholder='Enter Phone Number' value= {phone} 
+                onChange={(e) => setPhone(e.target.value)}/>
             </div>
     
             <input type='submit' value='Save Employee' className='btn-save'/>
